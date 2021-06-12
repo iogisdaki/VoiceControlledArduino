@@ -1,0 +1,19 @@
+{
+  "name": "voicecontrolledarduino",
+  "version": "1.0.0",
+  "description": "Program that controls an RGB LED using Arduino and a Teachable Machine neural network",
+  "main": "arduinoServer.js",
+  "scripts": {
+    "start": "sudo node arduinoServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iogisdaki/VoiceControlledArduino"
+  },
+  "author": "Jo Gisdaki",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "johnny-five": "^2.0.0"
+  }
+}
