@@ -15,7 +15,7 @@ Oh and since I mentioned it my model recognises these words/colours:
 The sound classifier is implemented using the p5 and ml5 libs which as you see are linked in index.html. Im using CDN links so no need to download anything.
 
 You need to have node installed. Im using the express lib and the johnny-five lib. 
-<br>To download these dependencies run
+<br>To download these dependencies, inside the folder of this package, run
 ```
 sudo npm install
 ```
@@ -25,7 +25,7 @@ you can just go ahead and run
 sudo npm start
 ```
 and then open a tab and go to http://localhost:3000/ .
-<br>Then you can just try saying a few colours and (fingers crossed) it changes the colour of the led and the html page correctly!!! If you want to see the colours the NN guesses you said and the confidence with which it guessed open dev tools and go to the console.
+<br>Then you can just try saying a few colours and (fingers crossed) it changes the colour of the LED and the html page correctly!!! If you want to see the colours the NN guesses you said and the confidence with which it guessed open dev tools and go to the console.
 
 If you find any bugs please report them, thank u :)
 
