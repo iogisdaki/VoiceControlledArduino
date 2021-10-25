@@ -27,6 +27,4 @@ sudo npm start
 and then open a tab and go to http://localhost:3000/ .
 <br>Then you can just try saying a few colours and (fingers crossed) it changes the colour of the LED and the html page correctly!!! If you want to see the colours the NN guesses you said and the confidence with which it guessed open dev tools and go to the console.
 
-If you find any bugs please report them, thank u :)
-
 
