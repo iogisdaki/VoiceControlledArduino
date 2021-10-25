@@ -1,11 +1,10 @@
 let soundClassifier;
 let colour;
 
-//doesnt need a callback funtion just load the model in preload
 function preload() {
   //return the results only if the confidence level is 85%
   let options = {
-    includeSpectrogram: true, // in case listen should return result.spectrogram
+    includeSpectrogram: true, 
     probabilityThreshold: 0.85,
     invokeCallbackOnNoiseAndUnknown: true,
     overlapFactor: 0.20
@@ -20,8 +19,6 @@ function setup() {
   soundClassifier.classify(gotResults);
 }
 
-
-//error-first callback
 function gotResults(error, results) {
   if (error) {
     console.log('something went wrong');
@@ -32,7 +29,6 @@ function gotResults(error, results) {
   console.log(results[0].label, results[0].confidence);
   colour = results[0].label;
 
-  //change html background colour  
   switch (colour) {
     case 'red':
       document.body.style.backgroundColor = "red";
@@ -57,18 +53,14 @@ function gotResults(error, results) {
       break;
   }
 
-  //attempt to send data to the local arduino server
   let data = results[0].label;
-  //specifying the request details
   const options = {
     method: 'POST',
     headers: {
-      //type to be delivered to the server is plain text
       'Content-Type': 'text/plain;charset=UTF-8'
     },
     body: data
   };
-  //make a post request 
   fetch('/api', options)
     .catch(error => {
       console.error(error)
